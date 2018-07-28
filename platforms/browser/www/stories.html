@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+    <title>Hindi kahaniya Hindi stories</title>
+        
+    <meta charset="utf-8" />
+
+           <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+
+       <meta http-equiv="Content-Security-Policy" 
+            default-src 'self';
+            connect-src *;
+            style-src 'self' data: chrome-extension-resource: 'unsafe-inline';
+            img-src 'self' data: chrome-extension-resource:;
+            frame-src 'self' data: chrome-extension-resource:;
+            font-src 'self' data: chrome-extension-resource:;
+            media-src *;>
+
+
+
+
+    
+
+    <!-- Stylesheets -->
+    <link href="css/ionicons.min.css" media="all" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <link rel="stylesheet" href="css/swipebox.min.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+  <body>
+        
+    <!-- Main Container -->
+    <div id="main" class="main">
+
+      <!-- Toolbar -->
+      <div id="toolbar" class="nav-material">
+        <div class="open-left" id="open-left" data-activates="slide-out-left">
+          <i class="ion-android-menu"></i>
+        </div>
+        <h1 class="title none truncate"></h1>
+     
+      </div>
+      <!-- End of Toolbar -->
+
+      <!-- Page Contents -->
+      <div class="">
+        
+        <!-- Hero Header -->
+        <div class="hero-material ">
+          <div class="parallax primary-color">
+            <div class="fixed-action-btn floating-button animated bouncein delay-3 horizontal click-to-toggle">
+              <a href="#!"  onClick="storyShare()" class="btn-floating btn-large accent-color">
+                <i class="ion-android-share-alt"></i>
+              </a>
+            
+            </div>
+         
+            <div class="banner-title"></div>
+          </div>
+        </div>
+        
+    
+
+        <!-- Article Content -->
+        <div class="animated fadeinup delay-1">
+          <div class="p-20">
+            <p class="text-flow"></p>
+            <br>
+
+         
+
+          </div>
+        </div>
+
+
+      </div> 
+      <!-- End of Page Contents -->
+
+
+
+      <!-- sidebar -->
+     
+      <!-- sidebar -->
+               <ul id="slide-out-left" class="side-nav collapsible">
+        <li class="sidenav-avatar bg-material">
+          <div class="opacity-overlay-gradient"></div>
+        
+        </li>
+        <li>
+          <div class="collapsible-header waves-effect">
+          <a href="index.html"><i class="ion-android-home"></i>Home</a>
+          </div>
+        </li>
+       <li>
+          <div class="collapsible-header waves-effect">
+            <a href="#" onClick="otherShare()"> <i class="ion-android-share-alt"></i>Share</a>
+          </div>
+        </li> 
+        <li>
+
+          <div class="collapsible-header waves-effect">
+            <a href="https://play.google.com/store/apps/details?id=com.devsun.hindikahaniya"  target="_self"> <i class="ion-android-playstore"></i>Rate</a>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header waves-effect">
+            <a href="mailto:surajsinghnegi009@gmail.com"  target="_self"> <i class="ion-android-list"></i>Feedback</a>
+          </div>
+        </li>
+   
+        <li>
+          <div class="collapsible-header waves-effect">
+           <a href="https://play.google.com/store/apps/developer?id=Devsun" target="_self"> <i class="ion-android-apps"></i>More apps</a>
+          </div> 
+        </li>
+      </ul>
+      <!-- Sidebars -->
+      <!-- Left Sidebar -->
+        
+    </div>
+    <!-- End of Main Container -->
+   <!-- End of Main Container -->
+
+    <!-- Scripts -->
+    <script src="js/vendor/jquery-2.1.0.min.js"></script>
+    <script src="js/helper.js"></script>
+    <script src="js/vendor/HeadsUp.js"></script>
+    <script src="js/vendor/jquery.smoothState.js"></script>
+    <script src="js/vendor/chart.min.js"></script>
+    <script src="js/vendor/jquery.mixitup.min.js"></script>
+    <script src="js/vendor/jquery.swipebox.min.js"></script>
+    <script src="js/vendor/masonry.min.js"></script>
+    <script src="js/vendor/swiper.min.js"></script>
+    <script src="js/vendor/materialize.min.js"></script>
+    <script src="js/main.js"></script>
+
+
+    <!-- Stylesheets -->
+     <script type="text/javascript" charset="utf-8" src="cordova.js"></script>  
+    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/contact.js" ></script>
+    <script type="text/javascript" src="js/SocialSharing.js"></script>
+    
+
+
+
+
+   <script type="text/javascript">
+     
+      $(document).ready(function(){
+        
+        var url = $(location).attr('href');
+        var newurl =  url.split('?');
+        var id = newurl[1];
+
+         $.ajax({
+          data:{"id":id},
+          url:'http://trafers.net/android_app_api/hindi_kahaniya/storyData.php',
+        success:function(data)
+        {
+          if(data!='')
+          {
+              $.each( data, function( key, value ) {
+                $(".text-flow").html(value.DESCRIPTION);
+                $(".banner-title").html(value.NAME);
+                $(".title").html(value.NAME);
+               });
+          }
+          else
+            {
+            $(".alldata").html('<img src="img/404.svg"/>');
+            }
+          }
+      })
+      })
+    </script>
+    
+  </body>
+</html>

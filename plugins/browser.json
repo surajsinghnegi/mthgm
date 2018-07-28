@@ -1,0 +1,58 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-admobpro": {
+            "PACKAGE_NAME": "com.devsun.suraj"
+        },
+        "cordova-plugin-battery-status": {
+            "PACKAGE_NAME": "com.devsun.suraj"
+        },
+        "cordova-plugin-camera": {
+            "PACKAGE_NAME": "com.devsun.suraj"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.devsun.suraj"
+        },
+        "cordova-plugin-dialogs": {
+            "PACKAGE_NAME": "com.devsun.suraj"
+        },
+        "cordova-plugin-geolocation": {
+            "PACKAGE_NAME": "com.devsun.suraj"
+        },
+        "cordova-plugin-globalization": {
+            "PACKAGE_NAME": "com.devsun.suraj"
+        },
+        "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "com.devsun.suraj"
+        },
+        "cordova-plugin-media-capture": {
+            "PACKAGE_NAME": "com.devsun.suraj"
+        },
+        "cordova-plugin-network-information": {
+            "PACKAGE_NAME": "com.devsun.suraj"
+        },
+        "cordova-plugin-vibration": {
+            "PACKAGE_NAME": "com.devsun.suraj"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.devsun.desktop"
+        }
+    },
+    "dependent_plugins": {
+        "cordova-plugin-extension": {
+            "PACKAGE_NAME": "com.devsun.suraj"
+        },
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "com.devsun.suraj"
+        },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "com.devsun.suraj"
+        }
+    }
+}
