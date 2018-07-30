@@ -26,7 +26,7 @@ function twitterShare(){
   };
 
  function otherShare(){
-   window.plugins.socialsharing.share('Do you want to make your brain work faster.\n Download Now! \nhttps://play.google.com/store/apps/details?id=com.devsun.mathtestgame', null, null, null);
+   window.plugins.socialsharing.share('Train your Brain to calculate faster than ever.\nDownload Now! \nhttps://play.google.com/store/apps/details?id=com.devsun.mathtestgame', null, null, null);
   };
 
  function storyShare(){ 
